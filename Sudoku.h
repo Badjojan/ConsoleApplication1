@@ -12,25 +12,26 @@ public:
     SudokuSolver(string s);
 
     void SetGrid() {
+        system("cls");
        cout<<this-> toString();
         cout << endl;
         int x=0;
         int y=0;
         int meaning;
         char end = 'o';
-        while (x <10 &&y<10) {
+        while (x < 10 && y < 10) {
 
             cout << "Enter the coordinates" << endl;
-            
+
             cin >> x;
-            if (x-1 > 8)break;
+            if (x - 1 > 8)break;
             cin >> y;
-            if (y-1 > 8)break;
+            if (y - 1 > 8)break;
             cout << x << " : " << y << endl;
             cout << "Input meaning" << endl;
             cin >> meaning;
-            grid[(x-1) * 9 + (y-1)] = meaning;
-            
+            grid[(x - 1) * 9 + (y - 1)] = meaning;
+            system("cls");
             cout << this->toString();
             cout << "to continue, click any letter." << endl;
             cout << "to solve it, press >9" << endl;
